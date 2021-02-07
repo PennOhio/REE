@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/data_entry_fragment">
+
+    <fragment
+        android:id="@+id/data_entry_fragment"
+        android:name="com.example.realestateevaluator11_30.dataentry.DataEntryFragment"
+        android:label="DataEntryFragment"
+        tools:layout="@layout/data_entry_fragment" >
+        <action
+            android:id="@+id/action_dataEntryFragment_to_resultsPageFragment"
+            app:destination="@id/results_page_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/results_page_fragment"
+        android:name="com.example.realestateevaluator11_30.results.ResultsPageFragment"
+        android:label="ResultsPageFragment"
+        tools:layout="@layout/results_page_fragment" >
+        <action
+            android:id="@+id/action_resultsPage_to_dataEntry"
+            app:destination="@id/data_entry_fragment" />
+        </fragment>
+</navigation>
